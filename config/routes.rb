@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :vehicles
   resources :locations
+  resources :driveroutes
 end

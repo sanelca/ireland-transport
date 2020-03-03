@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_134421) do
+ActiveRecord::Schema.define(version: 2020_03_03_143604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "driveroutes", force: :cascade do |t|
+    t.string "route_name"
+    t.string "location_from"
+    t.string "location_to"
+    t.string "start_time"
+    t.string "end_time"
+    t.string "vehicle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string "location_place"

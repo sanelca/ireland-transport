@@ -1,0 +1,2 @@
+class Driveroute < ApplicationRecord
+end
