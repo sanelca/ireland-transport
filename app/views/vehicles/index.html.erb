@@ -1,0 +1,11 @@
+<div class="list_of_the_elements">
+    <h3>
+        <span>Vehicle list</span>
+        <%= link_to 'Add Vehicle', new_vehicle_path, :class => 'navbar-link' %>
+    </h3>
+    <% if @vehicles.count > 0 
+        @vehicles.each { | vehicle |
+            @vehicle = vehicle %>
+            <%= render 'vehicle' %>
+    <% } end %>
+</div>

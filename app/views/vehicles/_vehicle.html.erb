@@ -1,0 +1,20 @@
+<div class="element_from_list">
+    <div class="element_details">
+        <div class="row">
+            <div class="left">Vehicle name</div>
+            <div class="right"><%= @vehicle.vehicle_name %></div>
+        </div>
+        <div class="row">
+            <div class="left">Registration number</div>
+            <div class="right"><%= @vehicle.registration_number %></div>
+        </div> 
+        <div class="row">
+            <div class="left">Number of seats</div>
+            <div class="right"><%= @vehicle.number_of_seats %></div>
+        </div>               
+    </div>
+    <div class="options">
+        <div><%= link_to 'Delete Vehicle', vehicle_path(@vehicle), method: 'delete', class: 'btn btn-default del' %></div>
+        <div><%= link_to 'Edit Vehicle', edit_vehicle_path(@vehicle), class: 'btn btn-default upd' %></div>
+    </div>
+</div>
