@@ -1,2 +1,11 @@
-<h1>Locations#index</h1>
-<p>Find me in app/views/locations/index.html.erb</p>
+<div class="list_of_the_elements">
+    <h3>
+        <span>Locations List</span>
+        <%= link_to 'Add Location', new_location_path, :class => 'navbar-link' %>
+    </h3>
+    <% if @locations.count > 0 
+        @locations.each { | location |
+            @location = location %>
+            <%= render 'location' %>
+    <% } end %>
+</div>

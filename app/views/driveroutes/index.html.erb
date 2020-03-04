@@ -1,2 +1,11 @@
-<h1>Driveroutes#index</h1>
-<p>Find me in app/views/driveroutes/index.html.erb</p>
+<div class="list_of_the_elements">
+    <h3>
+        <span>Routes List</span>
+        <%= link_to 'Add Route', new_driveroute_path, :class => 'navbar-link' %>
+    </h3>
+    <% if @driveroutes.count > 0 
+        @driveroutes.each { | driveroute |
+            @driveroute = driveroute %>
+            <%= render 'driveroute' %>
+    <% } end %>
+</div>

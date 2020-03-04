@@ -1,0 +1,28 @@
+<div class="element_from_list">
+    <div class="element_details">
+        <div class="row">
+            <div class="left">Route name</div>
+            <div class="right"><%= @driveroute.route_name %></div>
+        </div>
+        <div class="row">
+            <div class="left">Location From</div>
+            <div class="right"><%= @driveroute.location_from %></div>
+        </div> 
+        <div class="row">
+            <div class="left">Location To</div>
+            <div class="right"><%= @driveroute.location_to %></div>
+        </div>
+        <div class="row">
+            <div class="left">Start time</div>
+            <div class="right"><%= @driveroute.start_time %></div>
+        </div>    
+        <div class="row">
+            <div class="left">End time</div>
+            <div class="right"><%= @driveroute.end_time %></div>
+        </div>                          
+    </div>
+    <div class="options">
+        <div><%= link_to 'Delete Route', driveroute_path(@driveroute), method: 'delete', class: 'btn btn-default del' %></div>
+        <div><%= link_to 'Edit Route', edit_driveroute_path(@driveroute), class: 'btn btn-default upd' %></div>
+    </div>
+</div>

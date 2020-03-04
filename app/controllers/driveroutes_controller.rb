@@ -1,5 +1,6 @@
 class DriveroutesController < ApplicationController
   def index
+    @driveroutes = Driveroute.all
   end
 
   def new
