@@ -1,39 +1,58 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for @location, html: {class: "form-horizontal"} do |f| %>
-    <div class="form-group">
-      <%= f.label :location_place, class: "control-label col-sm-4" %>
-      <%= f.text_field :location_place, class: "col-sm-8"  %>
-    </div>
+      <div class="center_box">
+        <h2 class="center"><%= @title %></h2>
+        <div class="padding_box">
+          <div class="field">
+            <%= f.label :location_place, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :location_place, class: "col-sm-8"  %>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <%= f.label :city, class: "control-label col-sm-4" %>
-      <%= f.text_field :city, class: "col-sm-8"  %>
-    </div>
+          <div class="field">
+            <%= f.label :city, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :city, class: "col-sm-8"  %>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <%= f.label :location_register, class: "control-label col-sm-4" %>
-      <%= f.text_field :location_register, class: "col-sm-8"  %>
-    </div>
+          <div class="field">
+            <%= f.label :location_register, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :location_register, class: "col-sm-8"  %>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <%= f.label :location_address, class: "control-label col-sm-4" %>
-      <%= f.text_field :location_address, class: "col-sm-8"  %>
-    </div>
+          <div class="field">
+            <%= f.label :location_address, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :location_address, class: "col-sm-8"  %>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <%= f.label :longitude, class: "control-label col-sm-4" %>
-      <%= f.text_field :longitude, class: "col-sm-8"  %>
-    </div>
+          <div class="field">
+            <%= f.label :longitude, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :longitude, class: "col-sm-8"  %>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <%= f.label :latitude, class: "control-label col-sm-4" %>
-      <%= f.text_field :latitude, class: "col-sm-8"  %>
-    </div>
-    
-    <div class="center">
-      <%= f.submit "Add Location", class: 'btn btn-primary' %>
-    </div>
+          <div class="field">
+            <%= f.label :latitude, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :latitude, class: "col-sm-8"  %>
+            </div>
+          </div>
+          
+          <div class="center">
+            <%= f.submit @title, class: 'btn btn-primary' %>
+          </div>        
+        </div>
+     
+      </div>
+
     <% end %>
   </div>
 </div>

@@ -4,6 +4,7 @@ class LocationsController < ApplicationController
   end
 
   def new
+    @title = "Add Location"
     @location = Location.new
   end
 
@@ -21,6 +22,7 @@ class LocationsController < ApplicationController
   end
 
   def edit
+    @title = "Update Location"
     @location = Location.find(params[:id])
   end
 
