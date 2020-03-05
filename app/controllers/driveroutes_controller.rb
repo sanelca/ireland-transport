@@ -4,6 +4,7 @@ class DriveroutesController < ApplicationController
   end
 
   def new
+    @title = "Add Route"
     @driveroute = Driveroute.new
   end
 
@@ -21,6 +22,7 @@ class DriveroutesController < ApplicationController
   end
 
   def edit
+    @title = "Update Route"
     @driveroute = Driveroute.find(params[:id])
   end
 

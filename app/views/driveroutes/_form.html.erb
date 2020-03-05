@@ -1,39 +1,46 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for @driveroute, html: {class: "form-horizontal"} do |f| %>
-    <div class="form-group">
-      <%= f.label :route_name, class: "control-label col-sm-4" %>
-      <%= f.text_field :route_name, class: "col-sm-8"  %>
+    <div class="center_box">
+      <h2 class="center"><%= @title %></h2>
+      <div class="padding_box">
+        <div class="field">
+          <%= f.label :route_name, class: "control-label col-sm-4" %>
+          <%= f.text_field :route_name, class: "col-sm-8"  %>
+        </div>
+
+        <div class="field">
+          <%= f.label :location_from, class: "control-label col-sm-4" %>
+          <%= f.text_field :location_from, class: "col-sm-8"  %>
+        </div>
+
+        <div class="field">
+          <%= f.label :location_to, class: "control-label col-sm-4" %>
+          <%= f.text_field :location_to, class: "col-sm-8"  %>
+        </div>
+
+        <div class="field">
+          <%= f.label :start_time, class: "control-label col-sm-4" %>
+          <%= f.text_field :start_time, class: "col-sm-8"  %>
+        </div>
+
+        <div class="field">
+          <%= f.label :end_time, class: "control-label col-sm-4" %>
+          <%= f.text_field :end_time, class: "col-sm-8"  %>
+        </div>
+
+        <div class="field">
+          <%= f.label :vehicle, class: "control-label col-sm-4" %>
+          <%= f.text_field :vehicle, class: "col-sm-8"  %>
+        </div>
+        
+        <div class="center">
+          <%= f.submit "Add Route", class: 'btn btn-primary' %>
+        </div>       
+      </div>
+   
     </div>
 
-    <div class="form-group">
-      <%= f.label :location_from, class: "control-label col-sm-4" %>
-      <%= f.text_field :location_from, class: "col-sm-8"  %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :location_to, class: "control-label col-sm-4" %>
-      <%= f.text_field :location_to, class: "col-sm-8"  %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :start_time, class: "control-label col-sm-4" %>
-      <%= f.text_field :start_time, class: "col-sm-8"  %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :end_time, class: "control-label col-sm-4" %>
-      <%= f.text_field :end_time, class: "col-sm-8"  %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :vehicle, class: "control-label col-sm-4" %>
-      <%= f.text_field :vehicle, class: "col-sm-8"  %>
-    </div>
-    
-    <div class="center">
-      <%= f.submit "Add Route", class: 'btn btn-primary' %>
-    </div>
     <% end %>
   </div>
 </div>
