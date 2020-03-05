@@ -4,6 +4,7 @@ class VehiclesController < ApplicationController
     end
 
     def new
+        @title = "Add Vehicle"
         @vehicle = Vehicle.new
     end
 
@@ -21,6 +22,7 @@ class VehiclesController < ApplicationController
     end
 
     def edit
+        @title = "Update Vehicle"
         @vehicle = Vehicle.find(params[:id])
     end
 
