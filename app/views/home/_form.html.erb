@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with model: @bookmark do |f| %>
+      <div class="center_box">
+        <h2 class="center"><%= @title %></h2>
+        <div class="padding_box">
+          <div class="field">
+            <%= f.label :name, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :name, class: "col-sm-8"  %>
+            </div>
+          </div>
+
+          <div class="field">
+            <%= f.label :surname, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :surname, class: "col-sm-8"  %>
+            </div>
+          </div>
+
+          <div class="field">
+            <%= f.label :email, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :email, class: "col-sm-8"  %>
+            </div>
+          </div>
+          <div class="field">
+            <%= f.label :phone, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :phone, class: "col-sm-8"  %>
+            </div>
+          </div>
+          <div class="field">
+            <%= f.label :route_id, class: "control-label col-sm-4" %>
+            <div class="input_field">
+              <%= f.text_field :route_id, class: "col-sm-8"  %>
+            </div>
+          </div>          
+          <div class="center">
+            <%= f.submit @title, class: 'btn btn-primary' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

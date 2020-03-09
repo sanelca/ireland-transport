@@ -1,0 +1,11 @@
+<div class="list_of_the_elements">
+    <h3>
+        <span>Routepoints list</span>
+        <%= link_to 'Add Routepoint', new_routepoint_path, :class => 'navbar-link' %>
+    </h3>
+    <% if @routepoints.count > 0 
+        @routepoints.each { | routepoint |
+            @routepoint = routepoint %>
+            <%= render 'routepoint' %>
+    <% } end %>
+</div>

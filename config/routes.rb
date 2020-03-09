@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :vehicles
   resources :locations
   resources :driveroutes
+  resources :bookmarks
+  resources :routepoints
+  resources :trips
 end

@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_143604) do
+ActiveRecord::Schema.define(version: 2020_03_09_122502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.string "name"
+    t.string "surname"
+    t.string "email"
+    t.string "phone"
+    t.string "route_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "driveroutes", force: :cascade do |t|
     t.string "route_name"
@@ -33,6 +43,24 @@ ActiveRecord::Schema.define(version: 2020_03_03_143604) do
     t.string "location_address"
     t.string "longitude"
     t.string "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "routepoints", force: :cascade do |t|
+    t.string "route_id"
+    t.string "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "vehicle_id"
+    t.string "route_id"
+    t.string "point_from"
+    t.string "point_to"
+    t.string "time_start"
+    t.string "time_to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

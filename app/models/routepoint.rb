@@ -1,0 +1,2 @@
+class Routepoint < ApplicationRecord
+end

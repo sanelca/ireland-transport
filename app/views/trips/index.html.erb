@@ -1,0 +1,11 @@
+<div class="list_of_the_elements">
+    <h3>
+        <span>Trips List</span>
+        <%= link_to 'Add Trip', new_trip_path, :class => 'navbar-link' %>
+    </h3>
+    <% if @trips.count > 0 
+        @trips.each { | trip |
+            @trip = trip %>
+            <%= render 'trip' %>
+    <% } end %>
+</div>

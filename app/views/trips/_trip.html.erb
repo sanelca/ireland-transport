@@ -1,0 +1,32 @@
+<div class="element_from_list">
+    <div class="element_details">
+        <div class="row">
+            <div class="left">Vehicle ID</div>
+            <div class="right"><%= @trip.vehicle_id %></div>
+        </div>
+        <div class="row">
+            <div class="left">Route ID</div>
+            <div class="right"><%= @trip.route_id %></div>
+        </div> 
+        <div class="row">
+            <div class="left">Start Location</div>
+            <div class="right"><%= @trip.point_from %></div>
+        </div>
+        <div class="row">
+            <div class="left">End Location</div>
+            <div class="right"><%= @trip.point_to %></div>
+        </div>   
+        <div class="row">
+            <div class="left">Time From</div>
+            <div class="right"><%= @trip.time_start %></div>
+        </div>
+        <div class="row">
+            <div class="left">Time To</div>
+            <div class="right"><%= @trip.time_to %></div>
+        </div>         
+    </div>
+    <div class="options">
+        <div><%= link_to 'Delete Trip', trip_path(@trip), method: 'delete', class: 'btn btn-default del' %></div>
+        <div><%= link_to 'Edit Trip', edit_trip_path(@trip), class: 'btn btn-default upd' %></div>
+    </div>
+</div>
