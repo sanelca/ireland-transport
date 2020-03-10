@@ -176,7 +176,10 @@ body {
                             }
                             .input_field {
                                 float: left;
-                                width: 50%;        
+                                width: 50%;    
+                                input {
+                                    width: 100%;
+                                }    
                             }
                         }
                     }                   
