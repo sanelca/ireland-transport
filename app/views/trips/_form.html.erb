@@ -7,33 +7,33 @@
           <div class="field">
             <%= f.label :vehicle_id, class: "control-label col-sm-4" %>
             <div class="input_field">
-              <%= f.text_field :vehicle_id, class: "col-sm-8"  %>
+              <%= f.collection_select :vehicle_id, Vehicle.order(:vehicle_name),:id,:vehicle_name, include_blank: true  %>
             </div>
           </div>
 
           <div class="field">
             <%= f.label :route_id, class: "control-label col-sm-4" %>
             <div class="input_field">
-              <%= f.text_field :route_id, class: "col-sm-8"  %>
+              <%= f.collection_select :route_id, Driveroute.order(:route_name),:id,:route_name, include_blank: true  %>
             </div>
           </div>
           <div class="field">
             <%= f.label :point_from, class: "control-label col-sm-4" %>
             <div class="input_field">
-              <%= f.text_field :point_from, class: "col-sm-8"  %>
+              <%= f.collection_select :point_from, Location.order(:location_place),:id,:location_place, include_blank: true  %>
             </div>
           </div>    
           
           <div class="field">
             <%= f.label :point_to, class: "control-label col-sm-4" %>
             <div class="input_field">
-              <%= f.text_field :point_to, class: "col-sm-8"  %>
+              <%= f.collection_select :point_to, Location.order(:location_place),:id,:location_place, include_blank: true  %>
             </div>
           </div>     
           <div class="field">
             <%= f.label :time_start, class: "control-label col-sm-4" %>
             <div class="input_field">
-              <%= f.text_field :time_start, class: "col-sm-8"  %>
+              <%= f.text_field :time_start, as: :date  %>
             </div>
           </div>
           <div class="field">
@@ -50,3 +50,6 @@
     <% end %>
   </div>
 </div>
+<script>
+$('.datetimepicker').datetimepicker();
+</script>

@@ -30,6 +30,15 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'devise'
+
+gem 'jquery-ui-rails'
+
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-datetimepicker'
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Reduces boot times through caching; required in config/boot.rb
