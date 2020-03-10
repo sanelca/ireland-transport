@@ -70,13 +70,35 @@
         zoom:5,
       };
       var map = new google.maps.Map(document.getElementById("myMap"),mapProp);
-      var myCenter = new google.maps.LatLng(51.508742,-0.120850);
-      var marker = new google.maps.Marker({
-        position:myCenter,
-        animation:google.maps.Animation.BOUNCE
+      var myCenter = new google.maps.LatLng(document.getElementById("location_latitude").value, document.getElementById("location_longitude").value);
+      var markers = [];
+
+      google.maps.event.addListener(map, 'click', function(event) {
+        placeMarker(map, event.latLng);
       });
-      
-      marker.setMap(map);        
+      placeMarker(map, myCenter);
+      function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(map);
+        }
+      }      
+      function placeMarker(map, location) {
+        setMapOnAll(null);
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+        markers.push(marker);
+        
+        document.getElementById("location_longitude").value = location.lng();
+        document.getElementById("location_latitude").value = location.lat();
+        var infowindow = new google.maps.InfoWindow({
+          
+          content: 'Latitude: ' + location.lat() +
+          '<br>Longitude: ' + location.lng()
+        });
+        infowindow.open(map,marker);
+      }      
     }
   
 </script>
